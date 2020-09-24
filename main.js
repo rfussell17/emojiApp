@@ -8,3 +8,13 @@ for (let i = 0; i < myEmojis.length; i++) {
   emoji.textContent = myEmojis[i]
   emojiBin.append(emoji)
 }
+
+
+const addBtn = document.getElementById("push-btn")
+const inputBox = document.getElementById("emoji-input")
+
+addBtn.addEventListener("click", handleAddBtn)
+
+function handleAddBtn(){
+  console.log(inputBox.value)
+}
