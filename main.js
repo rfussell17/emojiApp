@@ -4,7 +4,7 @@ const emojiBin = document.querySelector("#emojiContainer")
 
 
 for (let i = 0; i < myEmojis.length; i++) {
-  var newSpan = document.createElement("span")
-  newSpan.textContent = myEmojis[i]
-  emojiContainer.append(newSpan)
+  const emoji = document.createElement("span")
+  emoji.textContent = myEmojis[i]
+  emojiContainer.append(emoji)
 }
