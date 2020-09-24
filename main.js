@@ -16,5 +16,11 @@ const inputBox = document.getElementById("emoji-input")
 addBtn.addEventListener("click", handleAddBtn)
 
 function handleAddBtn(){
-  console.log(inputBox.value)
+  if(inputBox.value){
+  myEmojis.push(inputBox.value)
+  console.log(myEmojis)
+  inputBox.value = ""
+  } else {
+    inputBox.value = ""
+  }
 }
