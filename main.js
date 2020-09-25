@@ -1,9 +1,9 @@
 
 const myEmojis = ["👨‍💻", "⛷", "🍲"]
-const emojiBin = document.querySelector("#emoji-container")
 const inputBox = document.getElementById("emoji-input")
 
 function renderEmojis(){
+  const emojiBin = document.querySelector("#emoji-container")
   emojiBin.innerHTML = ""
   for (let i = 0; i < myEmojis.length; i++) {
     const emoji = document.createElement("span")
@@ -36,4 +36,21 @@ function handleUnshiftBtn(){
     inputBox.value = ""
     renderEmojis();
     }
+}
+
+const popBtn = document.getElementById("pop-btn")
+popBtn.addEventListener("click", handlePopBtn)
+
+function handlePopBtn(){
+  myEmojis.pop()
+  renderEmojis();
+}
+
+const shiftBtn = document.getElementById("shift-btn")
+shiftBtn.addEventListener("click", handlePopBtn)
+
+function handleShiftBtn(){
+  myEmojis.shift()
+  console.log(myEmojis)
+  renderEmojis();
 }
